@@ -1,0 +1,55 @@
+/** COLOR VALUES **/
+
+$primaryColor: #222;
+$secondaryColor: #DDD;
+$accentColor: #d85305;
+
+
+/** FONT VARIABLES **/
+
+$fontStack: 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
+
+$fontColor: #FEFEFE;
+
+$fontColorDark--generic: #009688;
+$fontColorDark--own: #d85305;
+
+$fontSize--main: 12px;
+$fontSize--small: 10px;
+
+/** CHAT BUBBLES **/
+
+$bubbleColor--generic: #009688;
+$bubbleColor--own: #d85305;
+
+$bubbleMinWidth: 75px;
+$bubbleMaxWidth: 200px;
+
+/** BOX CORNERS **/
+
+$cornerRadius--tiny: 2px;
+$cornerRadius--small: 3px;
+$cornerRadius--medium: 5px;
+$cornerRadius--big: 10px;
+$cornerRadius--huge: 20px;
+
+/** CHAT BOX VALUES **/
+
+$chatBoxHeight: 100px;
+$chatBoxWidth: 40%;
+$chatBoxMinWidth: 300px;
+
+$chatBoxTextHeight: 55%;
+
+$sideSpacing: 30px;
+$messageMinWidth: 75px;
+$messageMaxWidth: 60%;
+
+/** EFFECTS VALUES **/
+
+$genericBoxShadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+
+/** EASE BEZIERS **/
+
+$primaryBezierOut: cubic-bezier(.4,.95,.7,1);
+$secondaryBezierOut: cubic-bezier(0.83, 0.93, 0.17, 1.87);

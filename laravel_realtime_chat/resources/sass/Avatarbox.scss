@@ -1,0 +1,102 @@
+@import 'Variables.scss';
+@import 'Extensions.scss';
+@import 'Mixins.scss';
+
+#AvatarBox{
+    
+    width: 100%;
+    height: 100%;
+    
+    font-family: $fontStack;
+    
+    .Avatarbox__canvas{
+
+    }
+
+    .Avatarbox__message{
+    
+        width: $bubbleMaxWidth;
+        height: 0px;
+
+        z-index: 1;
+        
+        user-select: none;
+        cursor: default;
+
+        .Avatarbox__message__name,
+        .Avatarbox__message__bubble{
+
+            position: absolute;
+
+            font-size: $fontSize--main;
+
+        }
+
+        .Avatarbox__message__name{
+
+            width: 200px;
+
+            top: 28px;
+
+            text-align: center;
+
+            transform: translateX(-68%);
+            
+            color: darken($fontColorDark--generic, 10%);
+            
+            .inner{
+                padding: 2px;
+                background-color: rgba(white, 0.75);
+                
+                border-radius: $cornerRadius--tiny;
+            }
+            
+            &.own{
+
+                font-weight: bold;
+                color: darken($fontColorDark--own, 5%);
+
+            }
+
+        }
+
+        .Avatarbox__message__bubble{
+
+            @extend %flex-center;
+            @include make-bubble($cornerRadius--big, $bubbleColor--generic, $fontColor, $genericBoxShadow, bottom, 12px, 17px, 0px, 0px, auto, 18px, auto, 0px);
+
+            min-width: $bubbleMinWidth;
+            max-width: $bubbleMaxWidth;
+
+            bottom: 70px;
+
+            padding: 13px;
+
+            transform: translateX(-50%);
+            transform-origin: center bottom;
+
+            visibility: hidden;
+
+            white-space: pre-line;
+            
+            &:after{
+                
+                margin: 0px auto;
+            
+            }
+            
+            &.own{
+
+                background-color: $bubbleColor--own;
+
+                &:after{
+                    border-color: $bubbleColor--own transparent transparent transparent;
+                }
+
+            }
+
+        }
+
+    }
+    
+}
