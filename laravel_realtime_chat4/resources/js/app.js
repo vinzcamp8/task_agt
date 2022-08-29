@@ -39,10 +39,11 @@ const app = new Vue({
         this.fetchMessages();
         window.Echo.private('chat')
             .listen('MessageSent', (e) => {
-                this.messages.push({
-                message: e.message.message,
-                user: e.user
-                });
+                this.fetchMessages(); // rifaccio il fetch dei messaggi se viene azionato l'evento
+                // this.messages.push({
+                // // message: e.message.message, // non posso usare questo metodo poiché il messaggio appena inviato risulterebbe criptato, quindi rifaccio il fetch di tutti i messaggi anche se è più costoso
+                // // user: e.user
+                // });
         });
     },
     methods: {

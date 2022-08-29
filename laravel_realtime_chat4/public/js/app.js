@@ -5468,10 +5468,11 @@ var app = new Vue({
 
     this.fetchMessages();
     window.Echo["private"]('chat').listen('MessageSent', function (e) {
-      _this.messages.push({
-        message: e.message.message,
-        user: e.user
-      });
+      _this.fetchMessages(); // this.messages.push({
+      // // message: e.message.message,
+      // // user: e.user
+      // });
+
     });
   },
   methods: {
